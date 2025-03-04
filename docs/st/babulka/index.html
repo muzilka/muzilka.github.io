@@ -3,46 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ПОДАРОК</title>
+    <title>Произошла неизвестная ошибка</title>
+    
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <script>
+        if (window.location.protocol !== "https:") {
+            window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+        }
+    </script>
+    
     <style>
         body {
+            background-color: #202124;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            text-align: center;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .container {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0; 
+            justify-content: center;
+            margin-top: 15vh;
+            gap: 16px;
         }
-
-        .round-button {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            background-image: url('button.png');
-            background-size: cover;
-            border: none;
-            cursor: pointer;
-            outline: none;
+        .hidden {
+            display: none;
         }
-
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+        .error-icon {
+            font-size: 48px;
+            color: #e8eaed;
+        }
         h1 {
-            margin: 20px;
             font-size: 24px;
-            text-align: center;
+            color: #e8eaed;
+            margin: 0;
+        }
+        p {
+            color: #9aa0a6;
+            margin: 0;
+        }
+        .retry-button {
+            background-color: #8ab4f8;
+            color: #202124;
+            border: none;
+            padding: 16px 32px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .fake-mute-button {
+            background-color: #303134;
+            color: #e8eaed;
+            padding: 20px 36px;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: not-allowed;
+            transition: transform 0.2s ease;
+        }
+        .fake-mute-button:active {
+            transform: scale(0.9);
         }
     </style>
 </head>
 <body>
-    <h1>BY @KUZYAFONK</h1> 
-    <button class="round-button" onclick="playSound()"></button>
-    <audio id="sound" src="sound.mp3"></audio>
+    <div class="container" id="errorMessage">
+        <div class="error-icon">⚠</div>
+        <h1>Произошла неизвестная ошибка</h1>
+        <button class="retry-button" id="retryButton">Попробовать ещё раз</button>
+    </div>
+
+    <div class="container hidden" id="soundPlaying">
+        <img src="button.png" alt="Логотип бренда" class="logo" loading="lazy">
+        <button class="fake-mute-button">🔇 Заглушить</button>
+    </div>
+
+    <audio id="funSound" src="sound.mp3" loop></audio>
+
     <script>
-        function playSound() {
-            var sound = document.getElementById('sound');
-            sound.currentTime = 0;
-            sound.play();
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const errorMessage = document.getElementById('errorMessage');
+            const retryButton = document.getElementById('retryButton');
+            const soundPlaying = document.getElementById('soundPlaying');
+            const sound = document.getElementById('funSound');
+
+            function playSound() {
+                sound.volume = 1.0;
+                sound.play()
+                    .then(() => {
+                        errorMessage.style.display = 'none';
+                        soundPlaying.style.display = 'flex';
+                    })
+                    .catch((e) => {
+                        console.error('Ошибка воспроизведения звука:', e);
+                        alert('Попробуйте снова.');
+                    });
+            }
+
+            retryButton.addEventListener('click', playSound);
+            document.body.addEventListener('click', playSound, { once: true });
+        });
     </script>
 </body>
 </html>
