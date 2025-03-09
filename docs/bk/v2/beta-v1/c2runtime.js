@@ -20221,4 +20221,3 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.acts.SetVar,
 	cr.system_object.prototype.acts.GoToLayout
 ];};
-
