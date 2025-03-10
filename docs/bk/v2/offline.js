@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1741591367,
+	"version": 1741592580,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -12,6 +12,11 @@
 		"images/righty-sheet0.png",
 		"images/lefty-sheet0.png",
 		"images/up-sheet0.png",
+		"media/в игре.ogg",
+		"media/загрузка.ogg",
+		"media/победа.ogg",
+		"media/поражение.ogg",
+		"media/фонменю.ogg",
 		"icon-16.png",
 		"icon-32.png",
 		"icon-114.png",
