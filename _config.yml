@@ -1,7 +1,7 @@
 title: МУЗИЛКА(КУЗЯФОНК)
 email: 
 description: Официальный сайт МУЗИЛКА, также известный как КУЗЯФОНК. Тгк @kuzyafonk
-baseurl: "/docs"  # Если проект в подпапке
+baseurl: ""  # Если проект в подпапке
 header_title: "Header Title"
 url:         "https://muzilka.github.io"
 date_format: "%-d.%m.%Y"
