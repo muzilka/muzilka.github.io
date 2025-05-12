@@ -1,0 +1,44 @@
+---
+---
+
+@import "variables";
+
+// Базовые стили
+body {
+  font-family: $base-font;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+// Стили для хэдера
+.site-header {
+  background: $header-bg;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $primary-color;
+  }
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+  .site-nav {
+    .trigger {
+      display: none;
+    }
+    
+    .nav-trigger:checked ~ .trigger {
+      display: block;
+    }
+  }
+}
