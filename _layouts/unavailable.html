@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  
+  <!-- Подключаем CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/default.css' | relative_url }}">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+   <!-- Скрипты и счётчик -->
+  {% include core.html %}
+  
+  <!-- Дополнительные мета-теги -->
+  {% seo %}
+</head>
+<body>
+  <!-- Хэдер -->
+  {% include header.html %}
+  
+  <!-- Основное содержимое -->
+  <main class="page-content">
+    <div class="wrapper">
+      <h1>Страница недоступна</h1>
+      <p>Данная страница ещё не готова для публикации</p>
+    </div>
+  </main>
+  
+  <!-- Футер -->
+  {% include footer.html %}
+  
+
+</body>
+</html>
