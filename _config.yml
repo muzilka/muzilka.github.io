@@ -11,6 +11,10 @@ baseurl: ""
 navigation:
   - name: "Главная"
     link: "/"
+  - name: "О нас"
+    link: "/about"
+  - name: "Наши игры"
+    link: "/games"
 
 # Соцсети
 social:
