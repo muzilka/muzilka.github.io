@@ -7,27 +7,26 @@ layout: default
   <h2>{{ page.title }}</h2>
   
   <div class="card-grid">
-      <div class="card card-primary">
-        <div class="card-image-container">
-	      <div class="card-image">
-          <img src="{{ service.image | default: '/assets/image/bk-preview.jpg' }}" alt="Скриншот из игры">
-        </div>
-</div>
-        <div class="card-content">
-          <h3 class="card-title">Браво Кузя<</h3>
-          <p class="card-text">Будет позже...</p>
-          <a href="bk" class="btn btn-outline">ИГРАТЬ</a>
-        </div>
+    <div class="card">
+      <div class="card-image-container">
+        <img src="/assets/image/bk-preview.jpg" alt="Скриншот из игры Браво Кузя">
       </div>
-	  <div class="card card-primary">
-        <div class="card-image">
-          <img src="{{ service.image | default: '/assets/image/bk2-preview.jpg' }}" alt="Скриншот из игры">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">Браво Кузя 2.0<</h3>
-          <p class="card-text">Будет позже...</p>
-          <a href="bk2" class="btn btn-outline">ИГРАТЬ</a>
-        </div>
+      <div class="card-content">
+        <h3 class="card-title">Браво Кузя</h3>
+        <p class="card-text">Будет позже...</p>
+        <a href="bk" class="btn btn-outline">ИГРАТЬ</a>
       </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-image-container">
+        <img src="/assets/image/bk2-preview.jpg" alt="Скриншот из игры Браво Кузя 2.0">
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Браво Кузя 2.0</h3>
+        <p class="card-text">Будет позже...</p>
+        <a href="bk2" class="btn btn-outline">ИГРАТЬ</a>
+      </div>
+    </div>
   </div>
 </section>
