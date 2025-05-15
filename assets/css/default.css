@@ -101,29 +101,7 @@ a:hover {
   color: var(--primary-dark);
 }
 
-/* Карточки */
-.card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.card-header {
-  background-color: var(--primary-light);
-  color: white;
-  padding: 1rem;
-}
-
-.card-body {
-  padding: 1.5rem;
-}
 
 /* Формы */
 .form-control {

@@ -44,19 +44,7 @@ body {
 }
 
 // Стили карточек
-.card {
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 2rem;
-  
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  }
-}
+
 
 .card-image {
   height: 200px;
@@ -73,20 +61,7 @@ body {
   }
 }
 
-.card-content {
-  padding: 1.5rem;
-  
-  .card-title {
-    color: #2c6871; // primary-dark
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-  }
-  
-  .card-text {
-    color: #333;
-    margin-bottom: 1.5rem;
-  }
-}
+
 
 // Варианты карточек
 .card-primary {
