@@ -113,7 +113,6 @@ body {
 
 .card-image-container {
   position: relative;
-  padding-top: 56.25%; // 16:9 соотношение
   max-height: 350px;
   overflow: hidden;
   
@@ -121,7 +120,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-	padding-top: 56.25%; // 16:9 соотношение
 	max-height: 350px;
     object-fit: cover;
   }
