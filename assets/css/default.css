@@ -226,16 +226,88 @@ a:hover {
     opacity: 0;
   }
 }
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
+
 
 // Адаптивность
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+// Карточки игр
+.games {
+  padding: 2rem 0;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary-dark);
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+}
+
+.card-image-container {
+  position: relative;
+  max-height: 350px;
+  overflow: hidden;
+  
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+	max-height: 350px;
+    object-fit: cover;
+  }
+}
+
+.card-content {
+  padding: 1rem;
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--secondary-dark);
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+// Адаптивность
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
